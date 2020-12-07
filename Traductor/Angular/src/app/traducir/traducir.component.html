@@ -1,0 +1,25 @@
+
+<div class="col-sm-8 offset-sm-2">
+    <form>
+        <div class="form-group">
+            <label for="fraseEspanol">Frase</label>
+            <input class="form-control mr-sm-2" name="fraseEspanol" type="text" placeholder="Frase a traducir"
+                #fraseEspanol>
+        </div>
+        <div class="form-group">
+            <label for="idioma">Idioma</label>
+            <input class="form-control mr-sm-2" name="idioma" type="text" placeholder="Idioma" #idioma>
+        </div>
+        <button (click)="traducir(fraseEspanol.value, idioma.value)" class="btn btn-outline-primary my-2 my-sm-0"
+            type="button">Traducir</button>
+
+
+    </form>
+
+    <div class="form-group">
+        <label for="fraseEspanol">Traducción</label>
+        <input [(ngModel)]="frase.Traduccion" type="text" name="TextoTraducido">
+
+        <audio [src]="audio" controls></audio>
+    </div>
+</div>
